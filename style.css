@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f05454, #30475e);
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #4d1a40;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#sudoku {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #30475e;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.cell.empty {
+    background-color: #f9d5d3;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #30475e;
+}
+
+.cell input:focus {
+    background-color: #ffe6e6;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f05454;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.controls button:hover {
+    background: #f1a3a9;
+}
+
+.message {
+   margin-top: 10px;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+}
+
+.message.success {
+    color: rgb(18, 168, 13);
+}
+
+.message.error {
+    color: rgb(243, 10, 10);
+}
+
+.message.visible {
+    display: block; /* Affiche le message quand il est visible*/
+}
+
+/* Styles pour le modal */
+.modal {
+    display: none; /* caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 1000;
+    color: white;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #463856; /* Couleur de fond */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal-content ul {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.modal-content ul li {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #3700b3;
+}

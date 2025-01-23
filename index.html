@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sudoku by Liantsoa</h1>
+      <div id="sudoku"></div>
+      <!-- Boutons de controle -->
+      <div class="controls">
+        <button id="solve-button">Aide</button>
+        <button id="validate-button">Valider</button>
+        <button id="show-tutorial">Tutoriel</button>
+      </div>
+      <div class="message"></div>
+    </div>
+
+    <!-- Modal pour le tutoriel -->
+    <div id="tutorial-modal" class="modal">
+      <div class="modal-content">
+        <h2>Comment jouer</h2>
+        <p>
+          Le sudoku est un jeu de logique sur une grille de 9*9 cases, divisée
+          en blocs de 3*3. Le but est de remplir chaque ligne, colonne et bloc
+          avec des chiffres de 1 à 9, sans répétitions.
+        </p>
+        <ul>
+          <li>Remplissez les cases vides en respectant les règles.</li>
+          <li>
+            Appuyez sur <strong>"Valider"</strong> pour confirmer une fois
+            terminer.
+          </li>
+          <li>Si vous êtes bloqué, appuyez sur <strong>Aide</strong>.</li>
+          <li>Amusez-vous et développez votre logique!</li>
+        </ul>
+        <button id="close-tutorial">OK</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
